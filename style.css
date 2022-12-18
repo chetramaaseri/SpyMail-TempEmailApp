@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', sans-serif;
+    overflow: hidden;
+}
+:root{
+    --dark-black: #212529;
+    --light-black: #343a40;
+    --main-bg-color: #ffffff;
+    --second-bg-color: #fff8f8;
+    --theme-color: #00DFC0;
+    --theme-color-2: #4AEFDF;
+}
+.btn{
+    background-color: var(--theme-color);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: var(--dark-black);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+/* Getting started */
+.container{
+    display: block;
+    margin: 0 auto;
+    background: var(--main-bg-color);
+}
+
+header h1{
+    margin: 30px 0 20px 25px ;
+    font-size: 30px;
+    color: var(--light-black);
+    font-weight: 800;
+}
+
+.home-hero {
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.home-hero img{
+    width: 100%;
+}
+.banner {
+    padding: 40px 30px 30px;
+}
+.banner h2{
+    margin-bottom: 10px;
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--dark-black);
+}
+.banner p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 15px;
+    color: var(--light-black);
+}
+.banner span{
+    color: var(--dark-black);
+    font-weight: 400;
+}
+
+#get-started {
+    margin: 10px auto;
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
+}
+#get-started i{
+    margin-left: 10px;
+    color: var(--dark-black);
+}
+
+.loading{
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    visibility: hidden;
+}
+.add-loader{
+    visibility: visible;
+}
+.loading div{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100px;
+    width: 100px;
+    border: 15px solid var(--theme-color);
+    border-top-color: var(--main-bg-color);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }    
+}
+
+/* -------------- Media Query -------------- */
+
+@media (min-width:480px) {
+    .container{
+       width: 70%;
+    }
+    .home-hero img{
+        width: 30%;
+    }
+    .banner {
+        max-width: 60%;
+    }
+    #get-started {
+        bottom: 80px;
+        right: 100px;
+    }
+    .inbox-container{
+        width: 70%;
+    }
+}

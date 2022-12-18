@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpyMail</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- User Can only ascces inbox page if flow is oK -->
+    <script>
+        const isOk = localStorage.getItem('isPathOk');
+        if (isOk === 'true') {
+            window.location = "inbox.html";
+        }
+    </script>
+</head>
+
+<body>
+<div id="loader" class="loading">
+    <div></div>
+</div>
+    <div class="container">
+<!-- Header -->
+        <header>
+            <h1>SpyMail</h1>
+        </header>
+<!-- Main Hero Img -->
+        <div class="home-hero">
+            <img src="./hero.jpg" alt="">
+        </div>
+<!-- Details -->
+        <div class="banner">
+            <h2>Get the best out of temp email</h2>
+            <p><span>Disposable email address (DEA)</span> technically means an approach where a user's with a unique email address gets a temporary email address for your current contact.</p>
+        </div>
+    </div>
+    <button id="get-started" class="btn">Get Started<i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Script Links -->
+    <script src="https://cdn.jsdelivr.net/gh/cemalgnlts/Mailjs@latest/mailjs.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/index.js"></script>
+</body>
+
+</html>

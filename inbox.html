@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox - SpyMail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inbox.css">
+    <script>
+        const isOk = localStorage.getItem('isPathOk');
+        if (isOk !== 'true') {
+            window.location = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <div id="loader" class="loading">
+        <div></div>
+    </div>
+    <div class="inbox-container">
+
+        <header>
+            <h1>SpyMail</h1>
+            <div id="email-address">
+                <span>Your Email Will Displayed Here</span>
+            </div>
+        </header>
+        <div class="inbox-header flex">
+            <h1>Inbox</h1>
+            <button type="submit" id="re-fresh" class="btn">Refresh</button>
+        </div>
+        <div id="inbox-list" class="inbox-list">
+        </div>
+    </div>
+    <div class="menu-buttons flex">
+        <button id="create">Create new</button>
+        <button id="delete">Delete Current</button>
+    </div>
+    
+    <div id="thanks-popup" class="operation-succesful">
+        <img src="/tick.png">
+        <h2>Thank You!</h2>
+        <p>Your account has been deleted!<br>Click here! You will be automatically redirected.</p>
+        <button id="popup-ok" class="btn">Ok</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/cemalgnlts/Mailjs@latest/mailjs.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/inbox.js"></script>
+</body>
+
+</html>

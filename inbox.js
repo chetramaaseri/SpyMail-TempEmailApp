@@ -59,7 +59,12 @@ async function openThisEmail(mail) {
     </div>
     `;
     const mailText = document.getElementById('mail-text');
-    mailText.innerText = mailData.data.text;
+    const mailTextData = mailData.data.text;
+    if ((mailTextData).includes('<html>')) {
+        mailText.innerHTML = mailTextData;
+    }else{
+        mailText.innerText = mailTextData;
+    }
     loader.classList.remove("add-loader");
 
 // Button events
